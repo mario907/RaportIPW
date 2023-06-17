@@ -5,7 +5,7 @@ import pandas as pd
 st.set_page_config(page_title = 'LGBT and Refugee Rights in Europe', layout = 'wide', page_icon = 'ikona_uniwersytetu.png')
 
 
-data = pd.read_excel('Pytania raport.xlsx')
+data = pd.read_excel('Pytania raport.xlsx', engine = 'xlsxwriter')
 
 im1, im2, im3, im4, im5 = st.columns([1,1,1.5,1.5,1.5])
 with im1:
