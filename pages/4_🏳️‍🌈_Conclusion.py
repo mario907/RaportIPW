@@ -69,8 +69,8 @@ st.plotly_chart(fig, use_container_width = True)
 view_data = data[data['Kraj']=='Germany'].copy().reset_index(drop = True)
 view_data.index += 1
 view_data = view_data.drop(columns = ['Kraj', 'Tak', 'Nie ', 'Nie mam zdania']).iloc[:-1,:]
-view_data.columns = ['Country', 'Full question', 'Description', 'Source']
-view_data['Country'] = view_data['Country'].str.replace('<br />', ' ')
+view_data.columns = ['Question', 'Full question', 'Description', 'Source']
+view_data['Question'] = view_data['Question'].str.replace('<br />', ' ')
 
 st.dataframe(view_data)
 st.markdown('Source: Equaldex.com')
